@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RK9M3EQMHY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RK9M3EQMHY');
+</script>
+<meta name="description" content="依一精选的网站合集">
+    <meta property="og:title" content="依一的网站分享">
+    <meta property="og:image" content="https://mclvlc.github.io/share/og-image.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站分享 - 依一</title>
+    <link rel="icon" type="image/png" href="https://cdnimg-v2.gamekee.com/wiki2.0/images/w_210/h_210/829/43637/2024/5/26/521134.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero-section">
+        <h1 class="hero-title">依一的网站分享</h1>
+        <div class="scroll-indicator"></div>
+    </div>
+    
+    <main class="sites-container">
+        <!-- 内容由JavaScript动态生成 -->
+    </main>
+
+    <script src="data.js"></script>
+    <script>
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            document.querySelector('.sites-container').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        function renderSites() {
+            const container = document.querySelector('.sites-container');
+            container.innerHTML = '';
+
+            // 生成公告卡片
+            const announcement = websiteData.find(s => s.isAnnouncement);
+            if (announcement) {
+                const announcementCard = document.createElement('div');
+                announcementCard.className = 'site-card announcement';
+                announcementCard.innerHTML = `
+                    <p class="site-description">${announcement.description}</p>
+                `;
+                container.appendChild(announcementCard);
+            }
+            // 生成标签栏（新增颜色配置）
+            const allTags = [...websiteData
+                .flatMap(site => site.tags || [])
+                .reduce((map, tag) => {
+                    if (tag.text) map.set(tag.text, tag);
+                    return map;
+                }, new Map())
+                .values()];
+            
+            const tagBar = document.createElement('div');
+            tagBar.className = 'tag-filter-bar';
+            tagBar.innerHTML = `
+                <div class="tag-filter all active" data-tag="all">全部</div>
+                ${allTags.map(tag => `
+                    <div class="tag-filter" 
+                         style="--tag-color: ${tag.color}"
+                         data-tag="${tag.text}">
+                        ${tag.text}
+                    </div>
+                `).join('')}
+            `;
+            container.appendChild(tagBar);
+
+            // 生成网站卡片
+            websiteData.filter(s => !s.isAnnouncement).forEach(site => {
+                const card = document.createElement('a');
+                card.className = 'site-card';
+                card.href = site.url;
+                card.target = "_blank";
+                card.dataset.tags = JSON.stringify(site.tags?.map(t => t.text) || []);
+
+                const tagsHTML = site.tags?.map(tag => `
+                    <div class="tag" style="
+                        color: ${tag.color};
+                        background: ${tag.color}33;
+                    ">${tag.text}</div>
+                `).join('') || '';
+
+                card.innerHTML = `
+                    <img src="${site.preview}" alt="${site.title}预览图" class="preview-image">
+                    <h2 class="site-title">${site.title}</h2>
+                    <div class="tag-container">${tagsHTML}</div>
+                    <p class="site-description">${site.description}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        renderSites();
+
+        // 标签筛选功能
+        document.querySelector('.sites-container').addEventListener('click', (e) => {
+            if (e.target.closest('.tag-filter')) {
+                const selectedTag = e.target.dataset.tag;
+                document.querySelectorAll('.tag-filter').forEach(t => 
+                    t.classList.toggle('active', t === e.target)
+                );
+                
+                document.querySelectorAll('.site-card').forEach(card => {
+                    if (card.classList.contains('announcement')) return;
+                    const cardTags = JSON.parse(card.dataset.tags || '[]');
+                    card.style.display = (selectedTag === 'all' || cardTags.includes(selectedTag)) 
+                        ? 'block' 
+                        : 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
