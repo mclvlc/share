@@ -70,6 +70,24 @@ const websiteData = [
         tags: [
             { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
         ]
-    }
+    },
+    {
+        title: "愿意让我成为你的皇帝吗？",
+        description: "表白网站皇帝版,由依一开发",
+        url: "https://mclvlc.github.io/long",
+        preview: "image/preview/long.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
+        ]
+    },
+    {
+        title: "愿意让我成为你的皇帝吗？仓库",
+        description: "表白网站皇帝版的仓库",
+        url: "https://github.com/mclvlc/long",
+        preview: "image/preview/long.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
+        ]
+    },
     // 添加新网站时只需复制这个对象格式
 ];
