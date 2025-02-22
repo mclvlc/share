@@ -61,6 +61,15 @@ const websiteData = [
         tags: [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
+    },
+    {
+        title: "可以成为我的恋人吗 Pro",
+        description: "是来自小雨大佬的改版，可以自定义名字和音乐",
+        url: "https://love.xyqaq.xyz/",
+        preview: "image/preview/xiaoyu.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
+        ]
     }
     // 添加新网站时只需复制这个对象格式
 ];
