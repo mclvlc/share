@@ -13,7 +13,7 @@ const websiteData = [
         description: "表白网站,原网站已失效，这里做一个补档。",
         url: "https://mclvlc.github.io/tang-love",
         preview: "image/preview/tang-love.png",
-        标签: [
+        tags: [
             { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
         ]
     },
@@ -22,7 +22,7 @@ const websiteData = [
         description: "表白网站的仓库",
         url: "https://github.com/mclvlc/tang-love",
         preview: "image/preview/tang-love.png",
-        标签: [
+        tags: [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
     },
@@ -31,7 +31,7 @@ const websiteData = [
         description: "表白网站朋友版,由依一二改自tang-love。",
         url: "https://mclvlc.github.io/friendship-page",
         preview: "image/preview/firendship-page.png",
-        标签: [
+        tags: [
             { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
         ]
     },
@@ -40,7 +40,7 @@ const websiteData = [
         description: "表白网站朋友版的仓库",
         url: "https://github.com/mclvlc/friendship-page",
         preview: "image/preview/firendship-page.png",
-        标签: [
+        tags: [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
     },
@@ -49,7 +49,7 @@ const websiteData = [
         description: "表白网站小狗版,由依一 二改自tang-love。<br>“不要”按钮是会乱跑的也请小心。",
         url: "https://mclvlc.github.io/doge",
         preview: "image/preview/doge.png",
-        标签: [
+        tags: [
             { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
         ]
     },
@@ -58,7 +58,7 @@ const websiteData = [
         description: "表白网站小狗版的仓库",
         url: "https://github.com/mclvlc/doge",
         preview: "image/preview/doge.png",
-        标签: [
+        tags: [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
     }
