@@ -89,5 +89,23 @@ const websiteData = [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
     },
+    {
+        title: "涩涩刮刮乐！",
+        description: "涩涩刮刮乐！可以随机刮出亲亲卡，涩涩卡,由依一开发",
+        url: "https://mclvlc.github.io/sese",
+        preview: "image/preview/sese.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
+        ]
+    },
+    {
+        title: "涩涩刮刮乐！仓库",
+        description: "涩涩刮刮乐！的仓库",
+        url: "https://github.com/mclvlc/sese",
+        preview: "image/preview/sese.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
+        ]
+    },
     // 添加新网站时只需复制这个对象格式
 ];
