@@ -117,7 +117,7 @@ const websiteData = [
         ]
     },
     {
-        title: "我们可以和好嘛？",
+        title: "我们可以和好嘛？仓库",
         description: "我们可以和好嘛？的仓库",
         url: "https://github.com/mclvlc/peace",
         preview: "image/preview/peace.png",
