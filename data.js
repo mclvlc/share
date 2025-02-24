@@ -125,5 +125,23 @@ const websiteData = [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
     },
+    {
+        title: "随机无厘头称号生成器！",
+        description: "随机无厘头称号生成器！这回是原创,由依一开发",
+        url: "https://mclvlc.github.io/title",
+        preview: "image/preview/title.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
+        ]
+    },
+    {
+        title: "随机无厘头称号生成器！仓库",
+        description: "随机无厘头称号生成器！的仓库",
+        url: "https://github.com/mclvlc/title",
+        preview: "image/preview/title.png",
+        tags: [
+            { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
+        ]
+    },
     // 添加新网站时只需复制这个对象格式
 ];
