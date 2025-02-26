@@ -46,9 +46,9 @@ const websiteData = [
     },
     {
         title: "doge",
-        description: "表白网站小狗版,由依一 二改自tang-love。<br>“不要”按钮是会乱跑的也请小心。",
+        description: "表白网站小狗版,由依一仿tang-love重构。<br>“不要”按钮是会乱跑的也请小心。",
         url: "https://mclvlc.github.io/doge",
-        preview: "https://s2.loli.net/2025/02/24/5vCF6ItdrPMkNVq.png",
+        preview: "https://s2.loli.net/2025/02/26/7h8KcLIxrGnSRqp.png",
         tags: [
             { text: "官方认证", color: "#53D256" },{ text: "表白类", color: "#FF69B4" }
         ]
