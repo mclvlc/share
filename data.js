@@ -57,7 +57,7 @@ const websiteData = [
         title: "doge仓库",
         description: "表白网站小狗版的仓库",
         url: "https://github.com/mclvlc/doge",
-        preview: "https://s2.loli.net/2025/02/24/5vCF6ItdrPMkNVq.png",
+        preview: "https://s2.loli.net/2025/02/26/7h8KcLIxrGnSRqp.png",
         tags: [
             { text: "官方认证", color: "#53D256" },{ text: "仓库", color: "#4274CD" }
         ]
